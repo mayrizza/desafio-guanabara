@@ -1,0 +1,67 @@
+body {
+    background: linear-gradient(45deg, #f5d583, #f39f99, #ee8ea8); /*Cores para simular o por do sol*/
+    animation: goldenHour 10s infinite alternate;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+@keyframes goldenHour {
+    0% {background: linear-gradient(45deg, #ff9a8b, #f1b5b1, #f17395);}
+    50% {background: linear-gradient(45deg, #f3cd91, #f5d19b, #f0a158);}
+    100% {background: linear-gradient(45deg, #ff9a8b, #f7d89f, #f0a6ba);}
+}
+h1 {
+    font-size: 3rem;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    color: #f1ece5;
+}
+.profile {
+    text-align: center;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.profile-img {
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+    max-width: 200px;
+}
+h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+p {
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+.social-icon {
+    transition: transform 0.2s ease, box-shadow 0.2s;
+    cursor: pointer;
+}
+.social-icon:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), 
+}
+#heart {
+    font-size: 2rem;
+    color: #ff6a5e;
+    animation: pulse 1.5s infinite;
+    transform-origin: center;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
