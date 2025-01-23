@@ -1,11 +1,14 @@
 body {
     background: linear-gradient(45deg, #f5d583, #f39f99, #ee8ea8); /*Cores para simular o por do sol*/
     animation: goldenHour 10s infinite alternate;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
 }
 @keyframes goldenHour {
     0% {background: linear-gradient(45deg, #ff9a8b, #f1b5b1, #f17395);}
@@ -14,23 +17,32 @@ body {
 }
 h1 {
     font-size: 3rem;
-    font-family: 'Arial', sans-serif;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     color: #f1ece5;
+    margin-bottom: 0;
 }
 .profile {
     text-align: center;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 10;
 }
 .profile-img {
     border-radius: 50%;
     margin-bottom: 20px;
     object-fit: cover;
-    width: 150px;
-    height: 150px;
-    max-width: 200px;
+    width: 250px;
+    height: 250px;
+    max-width: 100%;
 }
 h2 {
     font-size: 2rem;
@@ -41,8 +53,16 @@ p {
     font-weight: lighter;
 }
 .social-icon {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
     transition: transform 0.2s ease, box-shadow 0.2s;
     cursor: pointer;
+    flex-wrap: wrap;
+}
+.social-icon a {
+    font-size: 2rem;
+    transition: transform 0.2s ease;
 }
 .social-icon:hover {
     transform: translateY(-10px);
@@ -66,12 +86,23 @@ p {
     }
 }
 @media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
     h1 {
-        font-size: 2rem;
+      font-size: 2.5rem;
     }
-    .social-icon: {
-        width: 30px;
-        height: 30px;
+    h2 {
+        font-size: 1.5rem;
     }
-    
+    p {
+        font-size: 1rem;
+    }
+    .social-icon {
+        gap: 15px;
+    }
 }
